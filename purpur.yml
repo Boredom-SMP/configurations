@@ -8,12 +8,12 @@
 # Website: https://github.com/pl3xgaming/Purpur 
 # Wiki: https://github.com/pl3xgaming/Purpur/wiki 
 
-verbose: false
+verbose: true
 config-version: 18
 settings:
   use-alternate-keepalive: false
   disable-give-dropping: false
-  dont-send-useless-entity-packets: false
+  dont-send-useless-entity-packets: true
   lagging-threshold: 19.0
   allow-water-placement-in-the-end: true
   tps-catchup: true
@@ -157,8 +157,8 @@ settings:
     dont-run-with-scissors: <red><italic>Don't run with scissors!
     uptime-command-output: <green>Server uptime is <uptime>
     unverified-username: default
-    sleep-skipping-night: default
-    sleeping-players-percent: default
+    sleep-skipping-night: ''
+    sleeping-players-percent: ''
 world-settings:
   default:
     gameplay-mechanics:
@@ -240,7 +240,7 @@ world-settings:
         spectral-arrows: false
         tipped-arrows: false
       player:
-        spawn-invulnerable-ticks: 60
+        spawn-invulnerable-ticks: 100
         invulnerable-while-accepting-resource-pack: true
         teleport-if-outside-border: false
         totem-of-undying-works-in-inventory: false
@@ -397,7 +397,7 @@ world-settings:
       furnace:
         use-lava-from-underneath: false
       end_portal:
-        safe-teleporting: true
+        safe-teleporting: false
       blue_ice:
         allow-snow-formation: true
         allow-mob-spawns: true
@@ -419,7 +419,7 @@ world-settings:
       powder_snow:
         bypass-mob-griefing: false
       sand:
-        fix-duping: true
+        fix-duping: false
       shulker_box:
         allow-oversized-stacks: false
       sign:
@@ -749,7 +749,7 @@ world-settings:
       enderman:
         ridable: false
         ridable-in-water: false
-        allow-griefing: true
+        allow-griefing: false
         can-despawn-with-held-block: false
         bypass-mob-griefing: false
         takes-damage-from-water: true
@@ -1092,7 +1092,7 @@ world-settings:
       villager:
         ridable: false
         ridable-in-water: false
-        brain-ticks: 1
+        brain-ticks: 2
         use-brain-ticks-only-when-lagging: true
         follow-emerald-blocks: false
         can-be-leashed: true
@@ -1109,7 +1109,7 @@ world-settings:
           limit: 0
         lobotomize:
           enabled: true
-          check-interval: 80
+          check-interval: 160
       vindicator:
         ridable: false
         ridable-in-water: false
@@ -1144,7 +1144,7 @@ world-settings:
       zombie:
         ridable: false
         ridable-in-water: false
-        aggressive-towards-villager-when-lagging: true
+        aggressive-towards-villager-when-lagging: false
         break-door-minimum-difficulty: HARD
         bypass-mob-griefing: false
         attributes:
@@ -1245,7 +1245,7 @@ world-settings:
         ridable-max-y: 256.0
         health-regen-amount: 1.0
         health-regen-delay: 20
-        bypass-mob-griefing: false
+        bypass-mob-griefing: true
         can-ride-vehicles: false
         explosion-radius: 1.0
         play-spawn-sound: true

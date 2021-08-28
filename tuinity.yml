@@ -2,16 +2,6 @@
 lag-compensate-block-breaking: true
 send-full-pos-for-hard-colliding-entities: true
 config-version-please-do-not-modify-me: 2
-packet-limiter:
-  kick-message: '&cSent too many packets'
-  limits:
-    all:
-      interval: 7.0
-      max-packet-rate: 500.0
-    PacketPlayInAutoRecipe:
-      interval: 4.0
-      max-packet-rate: 5.0
-      action: DROP
 player-chunks:
   min-load-radius: 2
   max-concurrent-sends: 5.0
@@ -20,6 +10,16 @@ player-chunks:
   enable-mc162253-workaround: true
   target-chunk-send-rate: -35.0
   enable-frustum-priority: false
+packet-limiter:
+  kick-message: '&c(Tuinity) You sent too many packets'
+  limits:
+    all:
+      interval: 7.0
+      max-packet-rate: 4000.0
+    PacketPlayInAutoRecipe:
+      interval: 4.0
+      max-packet-rate: 5.0
+      action: DROP
 world-settings:
   default: {}
   world: {}
