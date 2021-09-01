@@ -25,7 +25,7 @@ settings:
   restart-script: ./start.sh
   netty-threads: 4
   log-villager-deaths: true
-  log-named-deaths: true
+  log-named-deaths: false
   attribute:
     maxHealth:
       max: 2048.0
@@ -36,10 +36,10 @@ settings:
 messages:
   whitelist: You are not whitelisted on this server! Apply in the Discord to join
   unknown-command: Unknown command. Type "/help" for help.
-  server-full: The server is full! Donate to the server to bypass the player limit!
+  server-full: The server is full!
   outdated-client: Outdated client! Please use {0}
   outdated-server: Outdated server! I'm still on {0}
-  restart: Server is restarting - Will be back up soon!
+  restart: Server is restarting
 advancements:
   disable-saving: false
   disabled:
@@ -63,7 +63,7 @@ stats:
   forced-stats: {}
 world-settings:
   default:
-    verbose: false
+    verbose: true
     hopper-amount: 1
     dragon-death-sound-radius: 0
     seed-village: 10387312
@@ -84,7 +84,7 @@ world-settings:
     seed-portal: 34222645
     max-tnt-per-tick: 100
     enable-zombie-pigmen-portal-spawns: true
-    item-despawn-rate: 6000
+    item-despawn-rate: 8000
     view-distance: 3
     wither-spawn-sound-radius: 0
     arrow-despawn-rate: 600
@@ -132,7 +132,7 @@ world-settings:
         animals-every: 1200
         animals-for: 100
         monsters-max-per-tick: 8
-        monsters-every: 400
+        monsters-every: 800
         monsters-for: 100
         villagers-max-per-tick: 4
         villagers-every: 600
@@ -142,7 +142,7 @@ world-settings:
         flying-monsters-for: 100
     ticks-per:
       hopper-transfer: 8
-      hopper-check: 8
+      hopper-check: 1
     hunger:
       jump-walk-exhaustion: 0.05
       jump-sprint-exhaustion: 0.2
@@ -158,7 +158,7 @@ world-settings:
       min: 45.0
     entity-tracking-range:
       players: 48
-      animals: 48
-      monsters: 48
+      animals: 32
+      monsters: 32
       misc: 32
-      other: 64
+      other: 32

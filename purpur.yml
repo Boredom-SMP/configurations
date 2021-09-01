@@ -920,7 +920,7 @@ world-settings:
       armorstand:
         step-height: 0.0
         set-name-visible-when-placing-with-custom-name: true
-        fix-nametags: true
+        fix-nametags: false
         can-movement-tick: true
         can-move-in-water: true
         can-move-in-water-over-fence: true

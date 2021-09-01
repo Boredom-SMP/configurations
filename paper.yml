@@ -21,7 +21,7 @@ settings:
   bungee-online-mode: true
   incoming-packet-spam-threshold: 300
   use-alternative-luck-formula: false
-  chunk-tasks-per-tick: 1000
+  chunk-tasks-per-tick: 600
   console-has-all-permissions: false
   player-auto-save-rate: -1
   max-player-auto-save-per-tick: -1
@@ -40,7 +40,7 @@ settings:
   unsupported-settings:
     allow-permanent-block-break-exploits: true
     allow-piston-duplication: true
-    allow-headless-pistons: false
+    allow-headless-pistons: true
     allow-permanent-block-break-exploits-readme: This setting controls if players
       should be able to break bedrock, end portals and other intended to be permanent
       blocks.
@@ -74,10 +74,10 @@ settings:
       author: 8192
       page: 16384
   chunk-loading:
-    min-load-radius: 2
-    max-concurrent-sends: 2
-    autoconfig-send-distance: true
     target-player-chunk-send-rate: 70.0
+    min-load-radius: 1
+    max-concurrent-sends: 5
+    autoconfig-send-distance: true
     max-global-chunk-send-rate: 500.0
     enable-frustum-priority: false
     global-max-chunk-load-rate: 300.0
@@ -94,8 +94,7 @@ settings:
         max-packet-rate: 5.0
         action: DROP
 messages:
-  no-permission: '&cI''m sorry, but you do not have permission to perform this command.
-    Please contact the server administrators if you believe that this is in error.'
+  no-permission: Unknown command. Type ./help for a list of commands.
   kick:
     authentication-servers-down: ''
     connection-throttle: Connection throttled! Please wait before reconnecting.
@@ -116,16 +115,16 @@ timings:
   - server-ip
   history-interval: 300
   history-length: 3600
-  server-name: Unknown Server
+  server-name: Boredom SMP
 world-settings:
   default:
-    update-pathfinding-on-block-update: false
+    update-pathfinding-on-block-update: true
     fix-wither-targeting-bug: false
     map-item-frame-cursor-update-interval: 10
     allow-player-cramming-damage: false
     piglins-guard-chests: true
     should-remove-dragon: false
-    max-auto-save-chunks-per-tick: 6
+    max-auto-save-chunks-per-tick: 3
     baby-zombie-movement-modifier: 0.5
     optimize-explosions: false
     fixed-chunk-inhabited-time: -1
@@ -148,15 +147,15 @@ world-settings:
     seed-based-feature-search: true
     seed-based-feature-search-loads-chunks: true
     water-over-lava-flow-speed: 5
-    grass-spread-tick-rate: 4
+    grass-spread-tick-rate: 1
     use-faster-eigencraft-redstone: true
     nether-ceiling-void-damage-height: 0
     fix-items-merging-through-walls: false
-    keep-spawn-loaded: true
+    keep-spawn-loaded: false
     disable-thunder: false
     skeleton-horse-thunder-spawn-chance: 0.01
     disable-ice-and-snow: false
-    keep-spawn-loaded-range: 3
+    keep-spawn-loaded-range: 0
     parrots-are-unaffected-by-player-movement: false
     only-players-collide: false
     allow-vehicle-collisions: true
@@ -173,7 +172,7 @@ world-settings:
     show-sign-click-command-failure-msgs-to-player: false
     iron-golems-can-spawn-in-air: false
     max-leash-distance: 10.0
-    delay-chunk-unloads-by: 10s
+    delay-chunk-unloads-by: 5s
     armor-stands-tick: true
     non-player-arrow-despawn-rate: 5
     creative-arrow-despawn-rate: -1
@@ -193,7 +192,7 @@ world-settings:
       disable-pillager-patrols: false
       scan-for-legacy-ender-dragon: true
       fix-curing-zombie-villager-discount-exploit: true
-      nerf-pigmen-from-nether-portals: false
+      nerf-pigmen-from-nether-portals: true
       disable-chest-cat-detection: false
       shield-blocking-delay: 5
       disable-player-crits: false
@@ -218,7 +217,7 @@ world-settings:
           secondarypoisensor: 80
       behavior:
         villager:
-          validatenearbypoi: 60
+          validatenearbypoi: 80
     entity-per-chunk-save-limit:
       experience_orb: 16
       snowball: 8
@@ -248,7 +247,7 @@ world-settings:
       MinimumTicks: 100
       MaximumTicks: 600
     despawn-ranges:
-      soft: 30
+      soft: 32
       hard: 56
     frosted-ice:
       enabled: true
@@ -285,7 +284,7 @@ world-settings:
       items:
         COBBLESTONE: 300
     anti-xray:
-      enabled: true
+      enabled: false
       engine-mode: 1
       max-block-height: 64
       update-radius: 2
