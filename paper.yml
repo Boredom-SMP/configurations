@@ -248,7 +248,7 @@ world-settings:
       MaximumTicks: 600
     despawn-ranges:
       soft: 32
-      hard: 56
+      hard: 128
     frosted-ice:
       enabled: true
       delay:
