@@ -21,7 +21,7 @@ settings:
   bungee-online-mode: true
   incoming-packet-spam-threshold: 300
   use-alternative-luck-formula: false
-  chunk-tasks-per-tick: 600
+  chunk-tasks-per-tick: 1000
   console-has-all-permissions: false
   player-auto-save-rate: -1
   max-player-auto-save-per-tick: -1
@@ -147,7 +147,7 @@ world-settings:
     seed-based-feature-search: true
     seed-based-feature-search-loads-chunks: true
     water-over-lava-flow-speed: 5
-    grass-spread-tick-rate: 1
+    grass-spread-tick-rate: 4
     use-faster-eigencraft-redstone: true
     nether-ceiling-void-damage-height: 0
     fix-items-merging-through-walls: false
@@ -248,7 +248,7 @@ world-settings:
       MaximumTicks: 600
     despawn-ranges:
       soft: 32
-      hard: 56
+      hard: 96
     frosted-ice:
       enabled: true
       delay:
@@ -284,7 +284,7 @@ world-settings:
       items:
         COBBLESTONE: 300
     anti-xray:
-      enabled: false
+      enabled: true
       engine-mode: 1
       max-block-height: 64
       update-radius: 2
