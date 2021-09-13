@@ -84,15 +84,15 @@ world-settings:
     seed-portal: 34222645
     max-tnt-per-tick: 100
     enable-zombie-pigmen-portal-spawns: true
-    item-despawn-rate: 8000
-    view-distance: 4
+    item-despawn-rate: 6000
+    view-distance: 3
     wither-spawn-sound-radius: 0
-    arrow-despawn-rate: 600
+    arrow-despawn-rate: 400
     trident-despawn-rate: 1200
     hanging-tick-frequency: 100
     zombie-aggressive-towards-villager: true
     nerf-spawner-mobs: true
-    mob-spawn-range: 8
+    mob-spawn-range: 6
     end-portal-sound-radius: 0
     max-entity-collisions: 2
     merge-radius:
@@ -117,7 +117,7 @@ world-settings:
       kelp-modifier: 100
     entity-activation-range:
       animals: 16
-      monsters: 24
+      monsters: 16
       raiders: 48
       misc: 8
       water: 8
@@ -128,14 +128,14 @@ world-settings:
       villagers-active-for-panic: true
       tick-inactive-villagers: false
       wake-up-inactive:
-        animals-max-per-tick: 4
+        animals-max-per-tick: 2
         animals-every: 1200
         animals-for: 100
-        monsters-max-per-tick: 8
-        monsters-every: 800
+        monsters-max-per-tick: 2
+        monsters-every: 1200
         monsters-for: 100
-        villagers-max-per-tick: 4
-        villagers-every: 600
+        villagers-max-per-tick: 2
+        villagers-every: 1200
         villagers-for: 100
         flying-monsters-max-per-tick: 8
         flying-monsters-every: 200
@@ -158,7 +158,7 @@ world-settings:
       min: 45.0
     entity-tracking-range:
       players: 48
-      animals: 48
-      monsters: 48
-      misc: 48
-      other: 48
+      animals: 16
+      monsters: 24
+      misc: 16
+      other: 16

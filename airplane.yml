@@ -11,7 +11,7 @@ projectile:
 # they're far away from the player
 dab:
   enabled: true
-  start-distance: 12
+  start-distance: 8
   max-tick-freq: 20
   activation-dist-mod: 8
   blacklisted-entities: []

@@ -18,22 +18,22 @@ settings:
   permissions-file: permissions.yml
   update-folder: update
   plugin-profiling: false
-  connection-throttle: 2000
+  connection-throttle: 4000
   query-plugins: true
   deprecated-verbose: default
-  shutdown-message: Server Closed - Will be back up soon!
+  shutdown-message: Server Closed
   minimum-api: none
 spawn-limits:
   monsters: 35
-  animals: 8
-  water-animals: 8
-  water-ambient: 8
-  ambient: 8
+  animals: 5
+  water-animals: 7
+  water-ambient: 7
+  ambient: 7
 chunk-gc:
   period-in-ticks: 300
 ticks-per:
   animal-spawns: 400
-  monster-spawns: 10
+  monster-spawns: 15
   water-spawns: 400
   water-ambient-spawns: 400
   ambient-spawns: 400
