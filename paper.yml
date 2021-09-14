@@ -176,7 +176,7 @@ world-settings:
     armor-stands-tick: true
     non-player-arrow-despawn-rate: 5
     creative-arrow-despawn-rate: -1
-    spawner-nerfed-mobs-should-jump: false
+    spawner-nerfed-mobs-should-jump: true 
     entities-target-with-follow-range: false
     zombies-target-turtle-eggs: true
     zombie-villager-infection-chance: -1.0
@@ -317,7 +317,7 @@ world-settings:
       - oak_planks
       - deepslate
     viewdistances:
-      no-tick-view-distance: 7
+      no-tick-view-distance: 10
     unsupported-settings:
       fix-invulnerable-end-crystal-exploit: true
     squid-spawn-height:
