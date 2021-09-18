@@ -14,7 +14,7 @@ settings:
   server-mod-name: Purpur
   use-alternate-keepalive: false
   dont-send-useless-entity-packets: true
-  lagging-threshold: 19.9
+  lagging-threshold: 19.5
   allow-water-placement-in-the-end: true
   tps-catchup: true
   disable-give-dropping: false

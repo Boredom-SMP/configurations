@@ -85,14 +85,14 @@ world-settings:
     max-tnt-per-tick: 100
     enable-zombie-pigmen-portal-spawns: true
     item-despawn-rate: 6000
-    view-distance: 3
+    view-distance: 4
     wither-spawn-sound-radius: 0
     arrow-despawn-rate: 400
     trident-despawn-rate: 1200
     hanging-tick-frequency: 100
     zombie-aggressive-towards-villager: true
     nerf-spawner-mobs: true
-    mob-spawn-range: 6
+    mob-spawn-range: 7
     end-portal-sound-radius: 0
     max-entity-collisions: 2
     merge-radius:
@@ -116,13 +116,13 @@ world-settings:
       sweetberry-modifier: 100
       kelp-modifier: 100
     entity-activation-range:
-      animals: 16
-      monsters: 16
+      animals: 20
+      monsters: 20
       raiders: 48
-      misc: 8
-      water: 8
-      villagers: 16
-      flying-monsters: 48
+      misc: 20
+      water: 20
+      villagers: 32
+      flying-monsters: 32
       villagers-work-immunity-after: 100
       villagers-work-immunity-for: 20
       villagers-active-for-panic: true
@@ -158,7 +158,7 @@ world-settings:
       min: 45.0
     entity-tracking-range:
       players: 48
-      animals: 16
-      monsters: 24
-      misc: 16
-      other: 16
+      animals: 32
+      monsters: 32
+      misc: 32
+      other: 32
