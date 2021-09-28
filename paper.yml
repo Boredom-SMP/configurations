@@ -191,7 +191,7 @@ world-settings:
     game-mechanics:
       disable-pillager-patrols: false
       scan-for-legacy-ender-dragon: true
-      fix-curing-zombie-villager-discount-exploit: true
+      fix-curing-zombie-villager-discount-exploit: false
       nerf-pigmen-from-nether-portals: true
       disable-chest-cat-detection: false
       shield-blocking-delay: 5
