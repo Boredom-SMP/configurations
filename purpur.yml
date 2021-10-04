@@ -14,7 +14,7 @@ settings:
   server-mod-name: Purpur
   use-alternate-keepalive: false
   dont-send-useless-entity-packets: true
-  lagging-threshold: 19.9
+  lagging-threshold: 19.5
   allow-water-placement-in-the-end: true
   tps-catchup: true
   disable-give-dropping: false
@@ -375,8 +375,8 @@ world-settings:
       villager:
         ridable: false
         ridable-in-water: false
-        brain-ticks: 10
-        use-brain-ticks-only-when-lagging: false
+        brain-ticks: 4
+        use-brain-ticks-only-when-lagging: true
         follow-emerald-blocks: false
         can-be-leashed: true
         can-breed: true
@@ -1044,7 +1044,7 @@ world-settings:
       furnace:
         use-lava-from-underneath: false
       end_portal:
-        safe-teleporting: true
+        safe-teleporting: false
       blue_ice:
         allow-snow-formation: true
         allow-mob-spawns: true
