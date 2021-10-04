@@ -1044,7 +1044,7 @@ world-settings:
       furnace:
         use-lava-from-underneath: false
       end_portal:
-        safe-teleporting: true
+        safe-teleporting: false
       blue_ice:
         allow-snow-formation: true
         allow-mob-spawns: true
