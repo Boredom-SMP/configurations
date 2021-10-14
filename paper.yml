@@ -13,6 +13,7 @@
 verbose: false
 config-version: 22
 settings:
+  log-player-ip-addresses: true
   use-display-name-in-quit-message: false
   load-permissions-yml-before-plugins: true
   region-file-cache-size: 256
@@ -74,6 +75,7 @@ settings:
       author: 8192
       page: 16384
   chunk-loading:
+    global-max-chunk-send-rate: -1.0
     target-player-chunk-send-rate: 70.0
     min-load-radius: 1
     max-concurrent-sends: 5
@@ -118,6 +120,7 @@ timings:
   server-name: Boredom SMP
 world-settings:
   default:
+    split-overstacked-loot: true
     update-pathfinding-on-block-update: true
     fix-wither-targeting-bug: false
     map-item-frame-cursor-update-interval: 10
@@ -248,7 +251,7 @@ world-settings:
       MaximumTicks: 600
     despawn-ranges:
       soft: 32
-      hard: 128
+      hard: 96
     frosted-ice:
       enabled: true
       delay:
@@ -322,3 +325,5 @@ world-settings:
       fix-invulnerable-end-crystal-exploit: true
     squid-spawn-height:
       maximum: 0.0
+    feature-seeds:
+      generate-random-seeds-for-all: false

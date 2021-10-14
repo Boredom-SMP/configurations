@@ -85,7 +85,7 @@ world-settings:
     max-tnt-per-tick: 100
     enable-zombie-pigmen-portal-spawns: true
     item-despawn-rate: 6000
-    view-distance: 4
+    view-distance: 3
     wither-spawn-sound-radius: 0
     arrow-despawn-rate: 400
     trident-despawn-rate: 1200
@@ -159,6 +159,6 @@ world-settings:
     entity-tracking-range:
       players: 48
       animals: 32
-      monsters: 32
-      misc: 32
-      other: 32
+      monsters: 24
+      misc: 24
+      other: 24
