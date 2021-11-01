@@ -11,7 +11,7 @@
 # Docs: https://paper.readthedocs.org/ 
 
 verbose: false
-config-version: 22
+config-version: 23
 settings:
   log-player-ip-addresses: true
   use-display-name-in-quit-message: false
@@ -82,7 +82,7 @@ settings:
     autoconfig-send-distance: true
     max-global-chunk-send-rate: 500.0
     enable-frustum-priority: false
-    global-max-chunk-load-rate: 300.0
+    global-max-chunk-load-rate: -1.0
     player-max-concurrent-loads: 4.0
     global-max-concurrent-loads: 500.0
   packet-limiter:
@@ -106,7 +106,7 @@ timings:
   enabled: true
   really-enabled: false
   verbose: true
-  url: https://timings.pl3x.net/
+  url: https://flare.airplane.gg
   server-name-privacy: false
   hidden-config-entries:
   - database
@@ -288,13 +288,14 @@ world-settings:
         COBBLESTONE: 300
     anti-xray:
       enabled: true
-      engine-mode: 1
+      engine-mode: 2
       max-block-height: 64
-      update-radius: 2
-      lava-obscures: false
+      update-radius: 7
+      lava-obscures: true
       use-permission: false
       hidden-blocks:
       - copper_ore
+      - cave_air
       - deepslate_copper_ore
       - gold_ore
       - deepslate_gold_ore
@@ -307,6 +308,7 @@ world-settings:
       - mossy_cobblestone
       - obsidian
       - chest
+      - stone
       - diamond_ore
       - deepslate_diamond_ore
       - redstone_ore
@@ -316,9 +318,222 @@ world-settings:
       - deepslate_emerald_ore
       - ender_chest
       replacement-blocks:
+      - diamond_ore
+      - iron_ore
+      - redstone_ore
+      - gold_ore
+    viewdistances:
+      no-tick-view-distance: 10
+    unsupported-settings:
+      fix-invulnerable-end-crystal-exploit: true
+    squid-spawn-height:
+      maximum: 0.0
+    feature-seeds:
+      generate-random-seeds-for-all: false
+  world_nether:
+    split-overstacked-loot: true
+    update-pathfinding-on-block-update: true
+    fix-wither-targeting-bug: false
+    map-item-frame-cursor-update-interval: 10
+    allow-player-cramming-damage: false
+    piglins-guard-chests: true
+    should-remove-dragon: false
+    max-auto-save-chunks-per-tick: 3
+    baby-zombie-movement-modifier: 0.5
+    optimize-explosions: false
+    fixed-chunk-inhabited-time: -1
+    use-vanilla-world-scoreboard-name-coloring: false
+    remove-corrupt-tile-entities: false
+    experience-merge-max-value: -1
+    prevent-moving-into-unloaded-chunks: true
+    count-all-mobs-for-spawning: true
+    ender-dragons-death-always-places-dragon-egg: false
+    allow-using-signs-inside-spawn-protection: false
+    falling-block-height-nerf: 0
+    tnt-entity-height-nerf: 0
+    filter-nbt-data-from-spawn-eggs-and-related: true
+    max-entity-collisions: 2
+    disable-creeper-lingering-effect: false
+    duplicate-uuid-resolver: saferegen
+    duplicate-uuid-saferegen-delete-range: 32
+    phantoms-do-not-spawn-on-creative-players: true
+    phantoms-only-attack-insomniacs: true
+    seed-based-feature-search: true
+    seed-based-feature-search-loads-chunks: true
+    water-over-lava-flow-speed: 5
+    grass-spread-tick-rate: 4
+    use-faster-eigencraft-redstone: true
+    nether-ceiling-void-damage-height: 0
+    fix-items-merging-through-walls: false
+    keep-spawn-loaded: false
+    disable-thunder: false
+    skeleton-horse-thunder-spawn-chance: 0.01
+    disable-ice-and-snow: false
+    keep-spawn-loaded-range: 0
+    parrots-are-unaffected-by-player-movement: false
+    only-players-collide: false
+    allow-vehicle-collisions: true
+    allow-non-player-entities-on-scoreboards: false
+    portal-search-radius: 128
+    portal-create-radius: 16
+    portal-search-vanilla-dimension-scaling: true
+    container-update-tick-rate: 1
+    armor-stands-do-collision-entity-lookups: false
+    disable-explosion-knockback: false
+    fix-climbing-bypassing-cramming-rule: true
+    disable-teleportation-suffocation-check: false
+    prevent-tnt-from-moving-in-water: false
+    show-sign-click-command-failure-msgs-to-player: false
+    iron-golems-can-spawn-in-air: false
+    max-leash-distance: 10.0
+    delay-chunk-unloads-by: 5s
+    armor-stands-tick: true
+    non-player-arrow-despawn-rate: 5
+    creative-arrow-despawn-rate: -1
+    spawner-nerfed-mobs-should-jump: true
+    entities-target-with-follow-range: false
+    zombies-target-turtle-eggs: true
+    zombie-villager-infection-chance: -1.0
+    all-chunks-are-slime-chunks: false
+    mob-spawner-tick-rate: 10
+    per-player-mob-spawns: true
+    map-item-frame-cursor-limit: 128
+    light-queue-size: 20
+    auto-save-interval: -1
+    enable-treasure-maps: true
+    treasure-maps-return-already-discovered: false
+    game-mechanics:
+      disable-pillager-patrols: false
+      scan-for-legacy-ender-dragon: true
+      fix-curing-zombie-villager-discount-exploit: false
+      nerf-pigmen-from-nether-portals: true
+      disable-chest-cat-detection: false
+      shield-blocking-delay: 5
+      disable-player-crits: false
+      disable-sprint-interruption-on-attack: false
+      disable-end-credits: false
+      disable-unloaded-chunk-enderpearl-exploit: true
+      disable-relative-projectile-velocity: false
+      disable-mob-spawner-spawn-egg-transformation: false
+      pillager-patrols:
+        spawn-chance: 0.2
+        spawn-delay:
+          per-player: false
+          ticks: 12000
+        start:
+          per-player: false
+          day: 5
+    generator-settings:
+      flat-bedrock: false
+    tick-rates:
+      sensor:
+        villager:
+          secondarypoisensor: 80
+      behavior:
+        villager:
+          validatenearbypoi: 80
+    entity-per-chunk-save-limit:
+      experience_orb: 16
+      snowball: 8
+      ender_pearl: 8
+      arrow: 8
+      fireball: -8
+      small_fireball: 8
+    wandering-trader:
+      spawn-minute-length: 1200
+      spawn-day-length: 4000
+      spawn-chance-failure-increment: 25
+      spawn-chance-min: 25
+      spawn-chance-max: 75
+    door-breaking-difficulty:
+      zombie:
+      - HARD
+      vindicator:
+      - NORMAL
+      - HARD
+    max-growth-height:
+      cactus: 3
+      reeds: 3
+      bamboo:
+        max: 16
+        min: 11
+    fishing-time-range:
+      MinimumTicks: 100
+      MaximumTicks: 600
+    despawn-ranges:
+      soft: 32
+      hard: 96
+    frosted-ice:
+      enabled: true
+      delay:
+        min: 20
+        max: 40
+    lootables:
+      auto-replenish: false
+      restrict-player-reloot: true
+      reset-seed-on-fill: true
+      max-refills: -1
+      refresh-min: 12h
+      refresh-max: 2d
+    mobs-can-always-pick-up-loot:
+      zombies: false
+      skeletons: false
+    hopper:
+      cooldown-when-full: true
+      disable-move-event: true
+    mob-effects:
+      undead-immune-to-certain-effects: true
+      spiders-immune-to-poison-effect: true
+      immune-to-wither-effect:
+        wither: true
+        wither-skeleton: true
+    spawn-limits:
+      monsters: -1
+      animals: -1
+      water-animals: -1
+      water-ambient: -1
+      ambient: -1
+    alt-item-despawn-rate:
+      enabled: false
+      items:
+        COBBLESTONE: 300
+    anti-xray:
+      enabled: true
+      engine-mode: 2
+      max-block-height: 125
+      update-radius: 7
+      lava-obscures: true
+      use-permission: false
+      hidden-blocks:
+      - copper_ore
+      - deepslate_copper_ore
+      - gold_ore
+      - deepslate_gold_ore
+      - nether_quartz_ore
+      - nether_gold_ore
+      - netherrack
+      - iron_ore
+      - deepslate_iron_ore
+      - coal_ore
+      - deepslate_coal_ore
+      - lapis_ore
+      - deepslate_lapis_ore
+      - mossy_cobblestone
+      - obsidian
+      - ancient_debris
+      - chest
       - stone
-      - oak_planks
-      - deepslate
+      - diamond_ore
+      - deepslate_diamond_ore
+      - redstone_ore
+      - deepslate_redstone_ore
+      - clay
+      - emerald_ore
+      - deepslate_emerald_ore
+      - ender_chest
+      replacement-blocks:
+      - nether_quartz_ore
+      - nether_gold_ore
     viewdistances:
       no-tick-view-distance: 10
     unsupported-settings:
