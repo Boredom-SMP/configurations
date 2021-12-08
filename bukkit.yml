@@ -13,7 +13,7 @@
 
 
 settings:
-  allow-end: true
+  allow-end: false
   warn-on-overload: true
   permissions-file: permissions.yml
   update-folder: update
@@ -24,20 +24,20 @@ settings:
   shutdown-message: Server Closed
   minimum-api: none
 spawn-limits:
-  water-underground-creature: 5
-  monsters: 37
-  animals: 10
+  water-underground-creature: 3
+  monsters: 40
+  animals: 5
   water-animals: 12
-  water-ambient: 25
+  water-ambient: 12
   ambient: 12
 chunk-gc:
   period-in-ticks: 300
 ticks-per:
-  water-underground-creature-spawns: 1
+  water-underground-creature-spawns: 400
   animal-spawns: 400
-  monster-spawns: 2
-  water-spawns: 2
-  water-ambient-spawns: 2
-  ambient-spawns: 2
+  monster-spawns: 1
+  water-spawns: 400
+  water-ambient-spawns: 400
+  ambient-spawns: 400
   autosave: 6000
 aliases: now-in-commands.yml
