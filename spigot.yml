@@ -10,22 +10,19 @@
 # IRC: #spigot @ irc.spi.gt ( http://www.spigotmc.org/pages/irc/ )
 # Forums: http://www.spigotmc.org/
 
-config-version: 12
 settings:
   debug: false
   bungeecord: true
   sample-count: 12
   player-shuffle: 0
   user-cache-size: 1000
-  save-user-cache-on-stop-only: true
+  save-user-cache-on-stop-only: false
   moved-wrongly-threshold: 0.0625
   moved-too-quickly-multiplier: 10.0
   timeout-time: 60
   restart-on-crash: true
   restart-script: ./start.sh
   netty-threads: 4
-  log-villager-deaths: true
-  log-named-deaths: false
   attribute:
     maxHealth:
       max: 2048.0
@@ -33,8 +30,10 @@ settings:
       max: 2048.0
     attackDamage:
       max: 2048.0
+  log-villager-deaths: true
+  log-named-deaths: true
 messages:
-  whitelist: You are not whitelisted on this server! Apply in the Discord to join
+  whitelist: You are not whitelisted on this server!
   unknown-command: Unknown command. Type "/help" for help.
   server-full: The server is full!
   outdated-client: Outdated client! Please use {0}
@@ -58,54 +57,18 @@ commands:
   silent-commandblock-console: false
 players:
   disable-saving: false
+config-version: 12
 stats:
   disable-saving: false
   forced-stats: {}
 world-settings:
   default:
-    view-distance: 7
-    mob-spawn-range: 6
     below-zero-generation-in-existing-chunks: true
-    simulation-distance: default
-    thunder-chance: 100000
-    verbose: true
-    hopper-amount: 1
-    dragon-death-sound-radius: 0
-    seed-village: 56413284
-    seed-desert: 84661894
-    seed-igloo: 77645328
-    seed-jungle: 74656532
-    seed-swamp: 25219877
-    seed-monument: 65666933
-    seed-shipwreck: 44576789
-    seed-ocean: 96334724
-    seed-outpost: 95512462
-    seed-endcity: 14673564
-    seed-slime: 85227461
-    seed-bastion: 44442738
-    seed-fortress: 5534612
-    seed-mansion: 47913364
-    seed-fossil: 89741131
-    seed-portal: 75431622
-    max-tnt-per-tick: 100
-    enable-zombie-pigmen-portal-spawns: true
-    item-despawn-rate: 6000
-    wither-spawn-sound-radius: 0
-    arrow-despawn-rate: 400
-    trident-despawn-rate: 1200
-    hanging-tick-frequency: 100
-    zombie-aggressive-towards-villager: true
-    nerf-spawner-mobs: true
-    end-portal-sound-radius: 0
-    max-entity-collisions: 2
+    verbose: false
     merge-radius:
-      exp: 6.0
-      item: 4.0
+      exp: 3.0
+      item: 2.5
     growth:
-      twistingvines-modifier: 100
-      weepingvines-modifier: 100
-      cavevines-modifier: 100
-      glowberry-modifier: 100
       cactus-modifier: 100
       cane-modifier: 100
       melon-modifier: 100
@@ -122,34 +85,46 @@ world-settings:
       bamboo-modifier: 100
       sweetberry-modifier: 100
       kelp-modifier: 100
+      twistingvines-modifier: 100
+      weepingvines-modifier: 100
+      cavevines-modifier: 100
+      glowberry-modifier: 100
     entity-activation-range:
-      animals: 48
-      monsters: 48
+      animals: 32
+      monsters: 32
       raiders: 48
-      misc: 8
-      water: 8
+      misc: 16
+      water: 16
       villagers: 32
-      flying-monsters: 48
-      villagers-work-immunity-after: 100
-      villagers-work-immunity-for: 20
-      villagers-active-for-panic: true
-      tick-inactive-villagers: false
+      flying-monsters: 32
       wake-up-inactive:
-        animals-max-per-tick: 2
+        animals-max-per-tick: 4
         animals-every: 1200
         animals-for: 100
-        monsters-max-per-tick: 2
-        monsters-every: 1200
+        monsters-max-per-tick: 8
+        monsters-every: 400
         monsters-for: 100
-        villagers-max-per-tick: 2
-        villagers-every: 1200
+        villagers-max-per-tick: 4
+        villagers-every: 600
         villagers-for: 100
         flying-monsters-max-per-tick: 8
         flying-monsters-every: 200
         flying-monsters-for: 100
+      villagers-work-immunity-after: 100
+      villagers-work-immunity-for: 20
+      villagers-active-for-panic: true
+      tick-inactive-villagers: true
+    entity-tracking-range:
+      players: 48
+      animals: 48
+      monsters: 48
+      misc: 32
+      other: 64
     ticks-per:
       hopper-transfer: 8
       hopper-check: 1
+    hopper-amount: 1
+    dragon-death-sound-radius: 0
     hunger:
       jump-walk-exhaustion: 0.05
       jump-sprint-exhaustion: 0.2
@@ -158,16 +133,22 @@ world-settings:
       swim-multiplier: 0.01
       sprint-multiplier: 0.1
       other-multiplier: 0.0
+    max-tnt-per-tick: 100
     max-tick-time:
       tile: 50
       entity: 50
-    squid-spawn-range:
-      min: 45.0
-    entity-tracking-range:
-      players: 48
-      animals: 48
-      monsters: 48
-      misc: 48
-      other: 48
+    arrow-despawn-rate: 1200
+    trident-despawn-rate: 1200
+    zombie-aggressive-towards-villager: true
+    enable-zombie-pigmen-portal-spawns: true
+    item-despawn-rate: 6000
+    view-distance: 8
+    simulation-distance: 4
+    thunder-chance: 100000
+    hanging-tick-frequency: 100
+    wither-spawn-sound-radius: 0
+    nerf-spawner-mobs: false
+    mob-spawn-range: 6
+    end-portal-sound-radius: 0
   worldeditregentempworld:
     verbose: false
