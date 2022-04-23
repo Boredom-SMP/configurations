@@ -26,3 +26,4 @@ web-services:
 projectile:
   max-loads-per-tick: 10
   max-loads-per-projectile: 10
+enable-suffocation-optimization: true
